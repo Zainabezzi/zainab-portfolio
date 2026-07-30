@@ -112,7 +112,7 @@ export default function HomePage() {
             </p>
             <div className="hero-actions">
               <motion.div {...hoverLift}>
-                <Link className="action-link" href="#projects">
+                <Link className="action-link" href="#experience">
                   View works
                 </Link>
               </motion.div>
@@ -180,7 +180,7 @@ export default function HomePage() {
           >
             <p className="panel-kicker">Links</p>
             <motion.div {...hoverLift}>
-              <Link className="route-card" href="#projects">
+              <Link className="route-card" href="#experience">
                 <span className="route-title">My Works</span>
                 <span className="route-copy">Projects across design, building, and product.</span>
               </Link>

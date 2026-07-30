@@ -99,7 +99,7 @@ export default function HomeNav({
           </Link>
         </li>
         <li>
-          <Link href="/works" onClick={() => setMenuOpen(false)}>
+          <Link href="/#experience" onClick={() => setMenuOpen(false)}>
             My Works
           </Link>
         </li>
