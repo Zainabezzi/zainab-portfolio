@@ -1,0 +1,357 @@
+@font-face {
+    font-family: "P22 Typewriter";
+    src: url("/fonts/p22-typewriter-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.page-about {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "P22 Typewriter", monospace;
+}
+
+
+.page-about {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --line: rgba(17, 17, 17, 0.1);
+    --text: #121212;
+    --muted: #626262;
+    --shadow-soft: 0 16px 40px rgba(15, 15, 15, 0.05);
+    --menu-surface: rgba(255, 255, 255, 0.96);
+    --card-surface: #f5f5f3;
+    --button-surface: #ffffff;
+    --hover-surface: rgba(17, 17, 17, 0.035);
+}
+.page-about.dark-mode {
+    --bg: #0c0c0d;
+    --surface: #121214;
+    --line: rgba(255, 255, 255, 0.12);
+    --text: #f3f3f1;
+    --muted: #a8a8a1;
+    --shadow-soft: 0 22px 54px rgba(0, 0, 0, 0.42);
+    --menu-surface: rgba(18, 18, 20, 0.96);
+    --card-surface: #171719;
+    --button-surface: #151517;
+    --hover-surface: rgba(255, 255, 255, 0.045);
+}
+.page-about * {
+    box-sizing: border-box;
+}
+.page-about {
+    margin: 0;
+    min-height: 100%;
+    font-family: "P22 Typewriter", monospace;
+    scroll-behavior: smooth;
+    color: var(--text);
+    background: var(--bg);
+}
+.page-about {
+    overflow-x: hidden;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+.page-about button, .page-about input, .page-about textarea, .page-about select {
+    font: inherit;
+}
+.page-about a {
+    color: inherit;
+}
+.page-about .page-shell {
+    width: min(1280px, calc(100vw - 32px));
+    margin: 0 auto;
+    padding: 96px 0 24px;
+}
+.page-about .page-nav {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    left: auto;
+    width: auto;
+    z-index: 1200;
+}
+.page-about .nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.page-about .menu-toggle {
+    display: none;
+}
+.page-about .theme-toggle, .page-about .menu-icon, .page-about .scroll-top {
+    border: 1px solid var(--line);
+    background: var(--button-surface);
+    color: var(--text);
+    box-shadow: var(--shadow-soft);
+}
+.page-about .theme-toggle {
+    min-width: 64px;
+    padding: 11px 14px;
+    cursor: pointer;
+}
+.page-about .menu-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 11px;
+    cursor: pointer;
+}
+.page-about .menu-icon span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 180ms ease, opacity 180ms ease;
+}
+.page-about .menu-toggle:checked + .nav-actions .menu-icon span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+.page-about .menu-toggle:checked + .nav-actions .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+.page-about .menu-toggle:checked + .nav-actions .menu-icon span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+.page-about .menu {
+    margin: 12px 0 0;
+    padding: 12px;
+    list-style: none;
+    border: 1px solid var(--line);
+    background: var(--menu-surface);
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    gap: 8px;
+    min-width: 180px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+.page-about .menu a {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+.page-about .menu-toggle:checked ~ .menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.page-about .theme-toggle:hover, .page-about .menu-icon:hover, .page-about .menu a:hover, .page-about .scroll-top:hover {
+    background: var(--hover-surface);
+}
+.page-about .hero {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+    padding: clamp(28px, 5vw, 56px);
+    display: grid;
+    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.12fr);
+    gap: clamp(22px, 4vw, 44px);
+    align-items: center;
+}
+.page-about .hero-portrait {
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    min-height: 0;
+    overflow: hidden;
+    background: #ebe9e2;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    align-self: start;
+}
+.page-about .hero-portrait img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 20%;
+    transform: none;
+}
+.page-about .hero-copy {
+    max-width: 820px;
+    display: grid;
+    gap: 0;
+}
+.page-about .hero h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 8vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+.page-about .hero-description {
+    margin: 20px 0 0;
+    max-width: 62ch;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--muted);
+}
+.page-about .hero-description-follow {
+    margin-top: 16px;
+}
+.page-about .about-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 22px;
+}
+.page-about .about-card {
+    border: 1px solid var(--line);
+    background: var(--card-surface);
+    box-shadow: var(--shadow-soft);
+    padding: 22px;
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+.page-about .about-card-large {
+    grid-row: span 1;
+}
+.page-about .section-label {
+    margin: 0;
+    font-size: 0.96rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+}
+.page-about .about-card p, .page-about .detail-list {
+    margin: 0;
+    line-height: 1.75;
+}
+.page-about .about-card p {
+    font-size: 1.02rem;
+}
+.page-about .detail-list {
+    padding-left: 18px;
+    display: grid;
+    gap: 10px;
+}
+.page-about .ways-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
+}
+.page-about .quote-panel {
+    margin-top: 28px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+    padding: 26px;
+}
+.page-about .quote-panel p {
+    margin: 0;
+    max-width: 42ch;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.6;
+}
+.page-about .page-footer {
+    margin-top: 48px;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+.page-about .page-footer p {
+    margin: 0;
+}
+.page-about .scroll-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1100;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+.page-about .scroll-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+.page-about .hero {
+        grid-template-columns: 1fr;
+    }
+.page-about .hero-portrait {
+        aspect-ratio: 5 / 6;
+    }
+.page-about .about-grid {
+        grid-template-columns: 1fr;
+    }
+.page-about .about-card-large {
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 640px) {
+.page-about .page-nav {
+        top: 12px;
+        right: 12px;
+        left: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+.page-about .nav-actions {
+        gap: 8px;
+        justify-content: flex-end;
+        width: max-content;
+    }
+.page-about .theme-toggle {
+        min-width: 58px;
+        padding: 10px 12px;
+    }
+.page-about .menu {
+        min-width: min(78vw, 260px);
+    }
+.page-about .page-shell {
+        width: calc(100vw - 20px);
+        padding-top: 84px;
+    }
+.page-about .hero, .page-about .about-card, .page-about .quote-panel {
+        padding: 18px;
+    }
+.page-about .hero {
+        gap: 18px;
+    }
+.page-about .hero-portrait {
+        aspect-ratio: 5 / 6;
+    }
+.page-about .hero-portrait img {
+        transform: none;
+        object-position: center 18%;
+    }
+.page-about .hero h1 {
+        font-size: clamp(2.2rem, 11vw, 3.8rem);
+    }
+.page-about .hero-description {
+        font-size: 0.98rem;
+        line-height: 1.8;
+    }
+.page-about .ways-list {
+        grid-template-columns: 1fr;
+    }
+.page-about .scroll-top {
+        right: 14px;
+        bottom: 14px;
+    }
+}

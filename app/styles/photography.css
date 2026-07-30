@@ -1,0 +1,654 @@
+@font-face {
+    font-family: "P22 Typewriter";
+    src: url("/fonts/p22-typewriter-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.page-photography {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "P22 Typewriter", monospace;
+}
+
+
+.page-photography {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --line: rgba(17, 17, 17, 0.1);
+    --text: #121212;
+    --muted: #626262;
+    --accent: #ffcc01;
+    --shadow-soft: 0 16px 40px rgba(15, 15, 15, 0.05);
+    --menu-surface: rgba(255, 255, 255, 0.96);
+    --media-surface: #f5f5f3;
+    --button-surface: #ffffff;
+    --hover-surface: rgba(17, 17, 17, 0.035);
+}
+.page-photography.dark-mode {
+    --bg: #0c0c0d;
+    --surface: #121214;
+    --line: rgba(255, 255, 255, 0.12);
+    --text: #f3f3f1;
+    --muted: #a8a8a1;
+    --shadow-soft: 0 22px 54px rgba(0, 0, 0, 0.42);
+    --menu-surface: rgba(18, 18, 20, 0.96);
+    --media-surface: #171719;
+    --button-surface: #151517;
+    --hover-surface: rgba(255, 255, 255, 0.045);
+}
+.page-photography * {
+    box-sizing: border-box;
+}
+.page-photography {
+    margin: 0;
+    min-height: 100%;
+    background: #ffffff;
+    color: var(--text);
+    font-family: "P22 Typewriter", monospace;
+    scroll-behavior: smooth;
+}
+.page-photography {
+    overflow-x: hidden;
+    background: var(--bg);
+    transition: background-color 180ms ease, color 180ms ease;
+}
+.page-photography img, .page-photography video {
+    display: block;
+    max-width: 100%;
+}
+.page-photography button, .page-photography input, .page-photography textarea, .page-photography select {
+    font: inherit;
+}
+.page-photography .page-shell {
+    width: min(1280px, calc(100vw - 32px));
+    margin: 0 auto;
+    padding: 96px 0 24px;
+}
+.page-photography .page-nav {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    left: auto;
+    width: auto;
+    z-index: 1200;
+    transition: opacity 180ms ease, visibility 180ms ease;
+}
+.page-photography .nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.page-photography .menu-toggle {
+    display: none;
+}
+.page-photography .theme-toggle, .page-photography .menu-icon {
+    border: 1px solid var(--line);
+    background: var(--menu-surface);
+    color: var(--text);
+    box-shadow: var(--shadow-soft);
+}
+.page-photography .theme-toggle {
+    min-width: 64px;
+    padding: 11px 14px;
+    cursor: pointer;
+}
+.page-photography .menu-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 11px;
+    cursor: pointer;
+}
+.page-photography .menu-icon span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 180ms ease, opacity 180ms ease;
+}
+.page-photography .menu-toggle:checked + .nav-actions .menu-icon span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+.page-photography .menu-toggle:checked + .nav-actions .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+.page-photography .menu-toggle:checked + .nav-actions .menu-icon span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+.page-photography .menu {
+    margin: 12px 0 0;
+    padding: 12px;
+    list-style: none;
+    border: 1px solid var(--line);
+    background: var(--menu-surface);
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    gap: 8px;
+    min-width: 180px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+.page-photography .menu a {
+    display: block;
+    padding: 8px 10px;
+    color: var(--text);
+    text-decoration: none;
+}
+.page-photography .theme-toggle:hover, .page-photography .menu-icon:hover, .page-photography .menu a:hover, .page-photography .lightbox-close:hover, .page-photography .lightbox-nav:hover, .page-photography .scroll-top:hover {
+    background: var(--hover-surface);
+}
+.page-photography .menu-toggle:checked ~ .menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.page-photography .hero {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+}
+.page-photography .hero {
+    padding: clamp(28px, 5vw, 56px);
+}
+.page-photography .eyebrow {
+    margin: 0 0 16px;
+    font-size: 0.88rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.page-photography .hero-copy {
+    max-width: 820px;
+}
+.page-photography .hero h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 8vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+.page-photography .hero-description {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+.page-photography .hero-description {
+    margin-top: 20px;
+    max-width: 62ch;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+.page-photography .media-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 22px;
+}
+.page-photography .filters {
+    margin-top: 22px;
+    overflow: visible;
+}
+.page-photography .filters-toggle {
+    display: none;
+    border: 1px solid var(--line);
+    background: var(--button-surface);
+    color: var(--text);
+    min-height: 42px;
+    padding: 10px 14px;
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+}
+.page-photography .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 10px;
+}
+.page-photography .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    background: var(--button-surface);
+    color: var(--text);
+    min-height: 40px;
+    padding: 10px 14px;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+.page-photography .filter-chip:hover {
+    background: var(--hover-surface);
+}
+.page-photography .filter-chip.is-active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}
+.page-photography .page-footer {
+    margin-top: 48px;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+.page-photography .page-footer p {
+    margin: 0;
+}
+.page-photography .media-card {
+    display: grid;
+    gap: 12px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--line);
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+.page-photography .media-card:hover {
+    transform: translateY(-2px);
+    background: var(--hover-surface);
+}
+.page-photography .media-frame {
+    width: 100%;
+    min-height: 260px;
+    border-bottom: 1px solid var(--line);
+    background: var(--media-surface);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+.page-photography .media-frame img, .page-photography .media-frame video {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    background: var(--media-surface);
+}
+.page-photography .media-info {
+    padding: 0 14px 16px;
+    display: grid;
+    gap: 10px;
+}
+.page-photography .media-title {
+    margin: 0;
+    font-size: 0.96rem;
+    font-weight: 400;
+    color: var(--text);
+}
+.page-photography .media-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: flex-start;
+}
+.page-photography .media-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    align-self: flex-start;
+    white-space: nowrap;
+    border: 1px solid var(--line);
+    padding: 6px 8px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1;
+}
+.page-photography .media-description {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    text-wrap: pretty;
+}
+.page-photography .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background: var(--bg);
+}
+.page-photography .lightbox.is-open {
+    display: grid;
+}
+.page-photography .lightbox-stage {
+    min-width: 0;
+    display: grid;
+    gap: 18px;
+    justify-items: center;
+}
+.page-photography .lightbox-media {
+    width: auto;
+    height: auto;
+    max-width: min(100%, 1100px);
+    max-height: min(76vh, 820px);
+    background: transparent;
+    border: none;
+    overflow: visible;
+    display: grid;
+    place-items: center;
+    cursor: zoom-in;
+}
+.page-photography .lightbox-asset {
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    max-width: min(100%, 1100px) !important;
+    max-height: min(76vh, 820px) !important;
+    object-fit: contain !important;
+    margin: auto;
+    background: transparent;
+}
+.page-photography .lightbox-caption {
+    width: min(100%, 820px);
+    justify-self: center;
+}
+.page-photography .lightbox-caption h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.page-photography .lightbox-caption p {
+    margin: 8px 0 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+.page-photography .lightbox-close, .page-photography .lightbox-nav {
+    border: 1px solid var(--line);
+    background: var(--button-surface);
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color 180ms ease, border-color 180ms ease;
+}
+.page-photography .lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 10px 14px;
+}
+.page-photography .lightbox-nav {
+    width: 52px;
+    height: 52px;
+    font-size: 2rem;
+    line-height: 1;
+}
+.page-photography .lightbox-nav:disabled {
+    opacity: 0.35;
+}
+.page-photography .scroll-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1100;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    background: var(--button-surface);
+    color: var(--text);
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+.page-photography .scroll-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+body.lightbox-open .page-photography .page-nav, body.lightbox-open .page-photography .scroll-top {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.page-photography .asset-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    display: none;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--bg);
+}
+.page-photography .asset-viewer.is-open {
+    display: grid;
+}
+.page-photography .asset-viewer-stage {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.page-photography .asset-viewer-stage img, .page-photography .asset-viewer-stage video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(100%, 1280px);
+    max-height: 88vh;
+    object-fit: contain;
+}
+.page-photography .asset-viewer-close, .page-photography .asset-viewer-nav {
+    border: 1px solid var(--line);
+    background: var(--button-surface);
+    color: var(--text);
+    cursor: pointer;
+}
+.page-photography .asset-viewer-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 10px 14px;
+}
+.page-photography .asset-viewer-nav {
+    width: 54px;
+    height: 54px;
+    font-size: 2rem;
+    line-height: 1;
+}
+.page-photography .asset-viewer-nav:disabled {
+    opacity: 0.35;
+}
+body.asset-viewer-open .page-photography .lightbox {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+.page-photography .page-shell {
+        width: min(100vw - 24px, 100%);
+    }
+.page-photography .media-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+.page-photography .media-frame {
+        min-height: 240px;
+    }
+.page-photography .menu {
+        min-width: 220px;
+    }
+.page-photography .lightbox {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 72px 16px 20px;
+    }
+.page-photography .asset-viewer {
+        grid-template-columns: 1fr;
+        padding: 72px 16px 20px;
+    }
+.page-photography .lightbox-stage {
+        width: 100%;
+    }
+.page-photography .lightbox-media {
+        max-height: min(62vh, 640px);
+    }
+.page-photography .lightbox-asset {
+        max-height: min(62vh, 640px) !important;
+    }
+.page-photography .lightbox-nav {
+        position: absolute;
+        bottom: 18px;
+    }
+.page-photography .lightbox-nav-prev {
+        left: 16px;
+    }
+.page-photography .lightbox-nav-next {
+        right: 16px;
+    }
+.page-photography .asset-viewer-nav {
+        position: absolute;
+        bottom: 18px;
+    }
+.page-photography .asset-viewer-nav-prev {
+        left: 16px;
+    }
+.page-photography .asset-viewer-nav-next {
+        right: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+.page-photography .page-nav {
+        top: 12px;
+        right: 12px;
+        left: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+.page-photography .nav-actions {
+        gap: 8px;
+        justify-content: flex-end;
+        width: max-content;
+    }
+.page-photography .theme-toggle {
+        min-width: 58px;
+        padding: 10px 12px;
+    }
+.page-photography .page-shell {
+        width: calc(100vw - 20px);
+        padding-top: 84px;
+    }
+.page-photography .filters-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+.page-photography .menu {
+        min-width: min(78vw, 260px);
+    }
+.page-photography .hero h1 {
+        font-size: clamp(2.1rem, 11vw, 3.8rem);
+        line-height: 1;
+    }
+.page-photography .media-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+.page-photography .filter-row {
+        display: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+        overflow: visible;
+        padding: 0;
+        margin-top: 0;
+    }
+.page-photography .filter-row.is-open {
+        display: grid;
+    }
+.page-photography .filter-chip {
+        width: 100%;
+        min-height: 38px;
+        padding: 9px 12px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+.page-photography .page-footer {
+        margin-top: 36px;
+        padding: 18px 0 0;
+    }
+.page-photography .hero {
+        padding: 22px;
+    }
+.page-photography .media-frame {
+        min-height: 220px;
+    }
+.page-photography .media-info {
+        padding: 0 12px 14px;
+        gap: 8px;
+    }
+.page-photography .media-title {
+        font-size: 0.9rem;
+    }
+.page-photography .media-tags {
+        gap: 6px;
+    }
+.page-photography .media-tag {
+        font-size: 0.72rem;
+        padding: 5px 7px;
+    }
+.page-photography .lightbox {
+        padding: 76px 12px 84px;
+    }
+.page-photography .lightbox-stage {
+        gap: 12px;
+    }
+.page-photography .lightbox-caption {
+        width: 100%;
+    }
+.page-photography .lightbox-caption h2 {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+.page-photography .lightbox-close {
+        top: 14px;
+        right: 14px;
+        padding: 9px 12px;
+    }
+.page-photography .asset-viewer-close {
+        top: 14px;
+        right: 14px;
+        padding: 9px 12px;
+    }
+.page-photography .lightbox-nav, .page-photography .asset-viewer-nav {
+        width: 46px;
+        height: 46px;
+        font-size: 1.7rem;
+    }
+.page-photography .asset-viewer {
+        padding: 76px 12px 84px;
+    }
+.page-photography .asset-viewer-nav {
+        display: none;
+    }
+.page-photography .scroll-top {
+        right: 14px;
+        bottom: 14px;
+    }
+}
