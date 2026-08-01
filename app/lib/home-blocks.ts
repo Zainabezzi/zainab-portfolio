@@ -65,41 +65,41 @@ export const projects: ContentBlock[] = [
     title: "#Karo",
     description:
       "Led logistics, sales, community engagement, and event execution, helping bring the initiative to life through cross functional collaboration and on ground coordination.",
-    image: WHITE,
+    image: "/images/projects/01-karo.png",
   },
   {
     eyebrow: "Year 1",
     title: "Service Design Project",
     description:
       "Explored the end to end customer experience of a local salon through observation, competitor research, and user interviews, identifying opportunities to improve the service journey.",
-    image: WHITE,
+    image: "/images/projects/02-service-design.png",
   },
   {
     eyebrow: "Year 1",
     title: "History Literature Festival",
     description:
       "Led the marketing campaign for my first client project by driving outreach across influencers, educational organizations, and local communities. The campaign reached 30,000+ people and helped bring 2,000+ attendees to the festival.",
-    image: WHITE,
+    image: "/images/projects/03-history-litfest.png",
   },
   {
     eyebrow: "Year 1",
     title: "Stahl Retail Store",
     description:
       "Designed a prototype for Stahl's first retail experience store, exploring how immersive spaces and thoughtful customer journeys could strengthen brand perception and build lasting customer connections.",
-    image: WHITE,
+    image: "/images/projects/04-stahl-retail.png",
   },
   {
     eyebrow: "Year 1",
     title: "Legacy Project",
     description:
       "Designed and prototyped a toy that embodied Let's Enterprise's core value of problem solving, balancing user experience, manufacturability, and a ₹50 production cost.",
-    image: WHITE,
+    image: "/images/projects/05-legacy.png",
   },
   {
     eyebrow: "Year 1",
     title: "Kickstart (Startup)",
     description:
       "Selected to lead a team in launching Mink, a fruit box startup built from scratch during a two week startup challenge. We applied design thinking to validate the idea, develop the product, build the brand, and execute sales and delivery, ultimately serving 193 customers.",
-    image: WHITE,
+    image: "/images/projects/06-kickstart.png",
   },
 ];
