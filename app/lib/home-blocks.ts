@@ -23,7 +23,7 @@ export const workExperience: ContentBlock[] = [
     title: "Brand & Marketing Apprentice",
     description:
       "Worked at the intersection of content and partnerships, crafting social media strategies, managing creator collaborations, and leading conversations with clients and partner agencies.",
-    image: WHITE,
+    image: "/images/experience/01-stahl.png",
   },
   {
     eyebrow: "Company: Wondergifts Dubai",
@@ -31,7 +31,7 @@ export const workExperience: ContentBlock[] = [
     title: "Content & Marketing Apprentice",
     description:
       "Crafted product stories at scale by writing on brand copy for 1,800+ SKUs, developing SEO driven content for multiple product lines, and supporting a new market launch through competitor and consumer research.",
-    image: WHITE,
+    image: "/images/experience/02-wondergifts.png",
   },
   {
     eyebrow: "Company: Scarters India",
@@ -39,7 +39,7 @@ export const workExperience: ContentBlock[] = [
     title: "Founders Office Apprentice",
     description:
       "Explored customer behavior to design retention strategies, built structured CRM workflows for targeted engagement, and translated global market research into a year long product launch strategy.",
-    image: WHITE,
+    image: "/images/experience/03-scarters.png",
   },
   {
     eyebrow: "Company: Amour Affairs / Little Wonders",
@@ -47,7 +47,7 @@ export const workExperience: ContentBlock[] = [
     title: "Business Development & Client Relations Apprentice",
     description:
       "Built Little Wonders from the ground up through branding, market research, client acquisition, CRM management for 1,200+ clients, and the design of key brand collaterals.",
-    image: WHITE,
+    image: "/images/experience/04-amour.png",
   },
   {
     eyebrow: "Company: Journeys Explore",
@@ -55,7 +55,7 @@ export const workExperience: ContentBlock[] = [
     title: "Social Media and Marketing Apprentice",
     description:
       "Built and managed the brand's content across social media and blogs, while supporting the execution of an annual event attended by over 800 people.",
-    image: WHITE,
+    image: "/images/experience/05-journeys.png",
   },
 ];
 
